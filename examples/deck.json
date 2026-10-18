@@ -1,0 +1,9 @@
+{
+  "title": "论文关联与科研阅读",
+  "sources": [{"id":"example","title":"小知己 示例","url":"https://api.semanticscholar.org/api-docs/","text":"引用关系示例","published_at":null}],
+  "slides": [
+    {"title":"科研助手的工作流程","bullets":["关键词检索论文","查找参考文献与被引用论文","结合上下文解释段落并保存知识"],"notes":"各步骤保留来源。","source_ids":["example"],"table":[],"chart":[]},
+    {"title":"引用与相似的区别","bullets":["引用具有方向：A 引用 B","相似表示文本接近，不等于引用"],"notes":"相似推荐不能作为引用证据。","source_ids":["example"],"table":[["关系","方向","依据"],["引用","有","参考文献记录"],["相似","无","标题与摘要向量"]],"chart":[]},
+    {"title":"示意数据（非实测）","bullets":["本图仅用于验证可编辑图表导出，不代表真实性能"],"notes":"示意数字。","source_ids":[],"table":[],"chart":[{"name":"示意数量","labels":["参考文献","被引用","相似推荐"],"values":[5,8,3]}]}
+  ]
+}

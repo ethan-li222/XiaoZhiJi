@@ -1,0 +1,10 @@
+{
+  "topic": "LangGraph",
+  "kind": "industry",
+  "days": 7,
+  "limit": 30,
+  "sources": [
+    {"type": "github", "repo": "langchain-ai/langgraph"},
+    {"type": "rss", "url": "https://blog.langchain.com/rss/"}
+  ]
+}

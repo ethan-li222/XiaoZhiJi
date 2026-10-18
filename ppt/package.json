@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@playwright/mcp": "0.0.83",
+    "pdfjs-dist": "6.4.299",
+    "pptxgenjs": "4.0.1"
+  }
+}

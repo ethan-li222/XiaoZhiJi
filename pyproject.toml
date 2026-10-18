@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-agent"
+version = "0.2.0"
+description = "XiaoZhiJi: personal knowledge, memory and research workspace with LangGraph and MCP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "langgraph>=1,<2", "langgraph-checkpoint-sqlite>=3,<4",
+  "langchain-openai>=1,<2", "langchain-ollama>=1,<2",
+  "langchain-mcp-adapters>=0.2,<0.4", "mcp>=1.20,<2",
+  "fastapi>=0.115,<1", "uvicorn", "typer", "pydantic-settings", "httpx",
+  "numpy", "pypdf", "beautifulsoup4", "trafilatura", "feedparser",
+  "sentence-transformers", "jieba", "python-dotenv"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "ruff", "build"]
+
+[project.scripts]
+research-agent = "research_agent.cli:app"
+research-agent-mcp = "research_agent.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.setuptools.package-data]
+research_agent = ["graph.html", "preview_powerpoint.ps1", "browser_search.cjs", "static/*"]
